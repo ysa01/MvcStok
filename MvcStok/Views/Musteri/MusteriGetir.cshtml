@@ -1,0 +1,25 @@
+﻿
+@model MvcStok.DAL.TBLMUSTERILER
+
+@{
+    ViewBag.Title = "MusteriGetir";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<h2>Güncellenecek Müşteri Bilgileri</h2>
+
+<form class="form-group" method="post" action="@Url.Action("Guncelle","Musteri")">
+    <div style="margin-top:10px;">
+        <label>Müşteri Id</label>
+        <input style="margin-top:5px; margin-bottom:5px;" class="form-control" value="@Model.MUSTERIID" type="text" name="ID"  />
+        <label>Müşteri Adı</label>
+        <input style="margin-top:5px; margin-bottom:5px;" class="form-control" value="@Model.MUSTERIADI" type="text" name="CustomerName" required />
+        <label>Müşteri SoyAdı</label>
+        <input style="margin-top:5px; margin-bottom:5px;" class="form-control" value="@Model.MUSTERISOYADI" type="text" name="CustomerSurName" required />
+    </div>
+    <div style="margin-top:5px;">
+        <button type="submit" class="btn btn-warning">
+            Güncelle
+        </button>
+    </div>
+</form>

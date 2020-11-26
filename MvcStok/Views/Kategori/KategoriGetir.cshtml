@@ -1,0 +1,21 @@
+﻿@model MvcStok.DAL.TBLKATEGORILER
+@{
+    ViewBag.Title = "KategoriGetir";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<h2>Güncellenecek Kategori Bilgileri</h2>
+
+<form class="form-group" method="post" action="@Url.Action("Guncelle","Kategori")">
+    <div style="margin-top:10px;">
+        <label>Kategori Id</label>
+        <input class="form-control" value="@Model.KATEGORIID" type="text" name="ID"  />
+        <label>Kategori Adı</label>
+        <input class="form-control" value="@Model.KATEGORIAD" type="text" name="CategoryName" required />
+    </div>
+    <div style="margin-top:5px;">
+        <button class="btn btn-warning" type="submit">
+           Güncelle
+        </button>
+    </div>
+</form>

@@ -1,0 +1,73 @@
+﻿
+@{
+    ViewBag.Title = "YeniSatis";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+
+<form class="form-group" method="post" action="@Url.Action("YeniSatis","Satis")">
+    <div>
+        <label>Kategori Seç</label>
+        @*@foreach (var item in ViewBag.Categories)
+        {
+            @Html.DropDownListFor(item.KATEGORIID,item.KATEGORIAD as SelectList,"---Select Category---")
+        }*@
+        <select style="margin-top:5px; margin-bottom:5px;" class="form-control" id="categoryId" name="CategoryID"onchange="GetProducts()">
+            <option value="-1">Kategori Seçiniz</option>
+            @foreach (var item in ViewBag.Categories)
+            {
+                <option value="@item.KATEGORIID" name="CategoryID">@item.KATEGORIAD</option>
+            }
+        </select>
+        <label>Ürün Seçiniz</label>
+        <select style="margin-top:5px; margin-bottom:5px;" class="form-control" name="ProductID" id="productId">
+            <option value="-1" name="ProductID">Ürün Seçiniz</option>
+            @*@foreach (var item in ViewBag.Product)
+            {
+                <option value="@item.URUNID">@item.URUNADI</option>
+            }*@
+        </select>
+
+        <label>Müşteri Seçiniz</label>
+        <select style="margin-top:5px; margin-bottom:5px;" class="form-control" name="CustomerID" id="categoryId">
+            <option value="-1">Müşteri Seçiniz</option>
+            @foreach (var item in ViewBag.Customer)
+            {
+                <option value="@item.MUSTERIID">@item.MUSTERIADI@item.MUSTERISOYADI</option>
+            }
+        </select>
+        <label>Adet</label>
+        <input style="margin-top:5px; margin-bottom:5px;" class="form-control" type="text" name="ProductPiece" required />
+        <label> Fiyat</label>
+        <input style="margin-top:5px; margin-bottom:5px;" class="form-control" type="text" name="Price" required />
+        <br />
+
+
+    </div>
+    <div style="margin-top:5px;">
+        <button type="submit" class="btn btn-success">Verileri Kaydet</button>
+    </div>
+</form>
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script type="text/javascript">
+    function GetProducts() {
+        var categoryId = $('#categoryId option:selected').val();
+        $.ajax({
+            type: "GET",
+            data: { categoryId: categoryId },
+            url: '@Url.Action("GetProductList", "Satis")',
+            success: function (result) {
+                $('#productId option').remove();
+                var p = '<option value="-1">Ürün Seçiniz</option>';
+                for (var i = 0; i < result.length; i++) {
+                    p += '<option value="' + result[i].Id + '">' + result[i].Name + '</option>';
+                }
+                $('#productId').html(p);
+            },
+            error: function() {
+                    alert("Verilerin alınması sırasında bir hata oluştu.");
+                }
+
+            });
+    }
+</script>

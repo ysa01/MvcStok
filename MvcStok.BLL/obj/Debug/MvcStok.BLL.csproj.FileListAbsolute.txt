@@ -1,0 +1,15 @@
+C:\Users\Hp\source\repos\MvcStok\MvcStok.BLL\bin\Debug\MvcStok.BLL.dll.config
+C:\Users\Hp\source\repos\MvcStok\MvcStok.BLL\bin\Debug\MvcStok.BLL.dll
+C:\Users\Hp\source\repos\MvcStok\MvcStok.BLL\bin\Debug\MvcStok.BLL.pdb
+C:\Users\Hp\source\repos\MvcStok\MvcStok.BLL\bin\Debug\EntityFramework.dll
+C:\Users\Hp\source\repos\MvcStok\MvcStok.BLL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Hp\source\repos\MvcStok\MvcStok.BLL\bin\Debug\MvcStok.DAL.dll
+C:\Users\Hp\source\repos\MvcStok\MvcStok.BLL\bin\Debug\MvcStok.DAL.pdb
+C:\Users\Hp\source\repos\MvcStok\MvcStok.BLL\bin\Debug\MvcStok.DAL.dll.config
+C:\Users\Hp\source\repos\MvcStok\MvcStok.BLL\bin\Debug\EntityFramework.xml
+C:\Users\Hp\source\repos\MvcStok\MvcStok.BLL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Hp\source\repos\MvcStok\MvcStok.BLL\obj\Debug\MvcStok.BLL.csprojAssemblyReference.cache
+C:\Users\Hp\source\repos\MvcStok\MvcStok.BLL\obj\Debug\MvcStok.BLL.csproj.CoreCompileInputs.cache
+C:\Users\Hp\source\repos\MvcStok\MvcStok.BLL\obj\Debug\MvcStok.BLL.csproj.CopyComplete
+C:\Users\Hp\source\repos\MvcStok\MvcStok.BLL\obj\Debug\MvcStok.BLL.dll
+C:\Users\Hp\source\repos\MvcStok\MvcStok.BLL\obj\Debug\MvcStok.BLL.pdb

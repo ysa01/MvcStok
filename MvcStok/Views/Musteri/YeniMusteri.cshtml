@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "YeniMusteri";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<form class="form-group" method="post">
+    <div style="margin-top:10px;">
+        <label>Yeni Müşteri Adı</label>
+        <input class="form-control" type="text" name="CustomerName" maxlength="15" required />
+    </div>
+    <div>
+    <label> Müşteri SoyAdı</label>
+    <input class="form-control" type="text" name="CustomerSurName" maxlength="15" required/>
+</div>
+    <div style="margin-top:5px;">
+        <button class="btn btn-info" id="btn1">
+            Müşteri Ekle
+        </button>
+    </div>
+    <script>
+        $('#btn1').click(function () {
+            alert('Müşteri Ekleme İşlemi Başarılı........!');
+        });
+    </script>
+</form>
+

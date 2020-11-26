@@ -1,0 +1,30 @@
+﻿
+@model List<MvcStok.DAL.TBLKATEGORILER>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<h2>Kategori Listeleme</h2>
+
+<table class="table table-bordered" >
+    <tr>
+        <th>Kategori Id</th>
+        <th>Kategori Adı</th>
+        <th>    </th>
+        <th>    </th>
+    </tr>
+    <tbody>
+        @foreach (var ktgr in Model)
+        {
+            <tr>
+                <th>@ktgr.KATEGORIID</th>
+                <td>@ktgr.KATEGORIAD</td>
+                <td> <a class="btn btn-danger" href="/Kategori/Sil/@ktgr.KATEGORIAD">Sil</a> </td>
+                <td>  <a class="btn btn-success" href="/Kategori/KategoriGetir/@ktgr.KATEGORIID">Güncelle</a> </td>
+            </tr>
+
+        }</tbody>
+</table>
+@*@Html.PagedListPager((IPagedList)Model,sayfa=>Url.Action("Index", new { sayfa}))*@
+<a class="btn btn-primary" href="/Kategori/YeniKategori">Yeni Kategori Ekle</a>

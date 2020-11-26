@@ -1,0 +1,20 @@
+﻿
+
+@{
+    ViewBag.Title = "YeniKategori";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+
+
+<form class="form-group" method="post">
+    <div style="margin-top:10px;">
+        <label>Yeni Kategori Adı</label>
+        <input class="form-control" type="text"  name="CategoryName"  required maxlength="20"/>
+    </div>
+    <div style="margin-top:5px;">
+        <button class="btn btn-info">
+            Kategori Ekle
+        </button>
+    </div>
+</form>

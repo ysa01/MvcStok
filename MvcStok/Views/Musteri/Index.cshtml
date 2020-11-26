@@ -1,0 +1,41 @@
+﻿
+@model List<MvcStok.DAL.TBLMUSTERILER>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+@*@using (Html.BeginForm("Index", "Musteri", FormMethod.Get))
+{
+  <p>
+      <b> Arancak Müşteri Adı: </b> @Html.TextBox("p1")
+      <input type="submit" value="Ara" />
+  </p>
+}*@
+
+<h2>Müşteri Listeleme</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>Müşteri Id</th>
+        <th>Müşteri Adı</th>
+        <th>Müşteri SoyAdı</th>
+        <th>    </th>
+        <th>    </th>
+        
+    </tr>
+    <tbody>
+        @foreach (var mstr in Model)
+        {
+        <tr>
+            <th>@mstr.MUSTERIID</th>
+            <td>@mstr.MUSTERIADI</td>
+            <td>@mstr.MUSTERISOYADI</td>
+            <td>  @Html.ActionLink("Sil", "Sil", new { ID = mstr.MUSTERIID }, new { @class = "btn btn-danger", onclick = "return confirm('Gerçekten Silmek İstiyormusunuz?')" })  </td>
+            @*<td> <a class="btn btn-danger" href="/Musteri/Sil/@mstr.MUSTERIID">Sil</a> </td>*@
+            <td>  <a class="btn btn-success" href="/Musteri/MusteriGetir/@mstr.MUSTERIID">Güncelle</a> </td>
+
+        </tr>
+        }
+    </tbody>
+</table>
+<a class="btn btn-primary" href="/Musteri/YeniMusteri">Yeni Müşteri Ekle</a>

@@ -1,0 +1,38 @@
+﻿@model List<MvcStok.DAL.TBLSATISLAR>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<h2>Yapılan Satışlar</h2>
+<table id="tbl1" class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Satış Id</th>
+            <th>Kategori</th>
+            <th>Ürün Adı</th>
+            <th>Müşteri Ad-Soyad</th>
+            <th>Adet</th>
+            <th>Fiyat</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var sat in Model)
+        {
+        <tr>
+            <th>@sat.SATISID</th>
+            <td>@sat.TBLKATEGORILER.KATEGORIAD</td>
+            <td>@sat.TBLURUNLER.URUNADI</td>
+            <td>@sat.TBLMUSTERILER.MUSTERIADI@sat.TBLMUSTERILER.MUSTERISOYADI</td>
+            <td>@sat.ADET</td>
+            <td>@sat.FIYAT</td>
+
+            @*<td> <a class="btn btn-danger" href="/Urun/Sil/@urn.URUNID">Sil</a> </td>
+            <td>  <a class="btn btn-success" href="/Urun/UrunGetir/@urn.URUNID">Güncelle</a> </td>*@
+        </tr>
+
+        }
+    </tbody>
+</table>
+<a class="btn btn-primary" href="/Satis/YeniSatis" style="margin-top:-10px;">Satış Yap</a>

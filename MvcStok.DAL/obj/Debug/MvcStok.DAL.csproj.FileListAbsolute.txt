@@ -1,0 +1,11 @@
+C:\Users\Hp\source\repos\MvcStok\MvcStok.DAL\bin\Debug\MvcStok.DAL.dll.config
+C:\Users\Hp\source\repos\MvcStok\MvcStok.DAL\bin\Debug\MvcStok.DAL.dll
+C:\Users\Hp\source\repos\MvcStok\MvcStok.DAL\bin\Debug\MvcStok.DAL.pdb
+C:\Users\Hp\source\repos\MvcStok\MvcStok.DAL\bin\Debug\EntityFramework.dll
+C:\Users\Hp\source\repos\MvcStok\MvcStok.DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Hp\source\repos\MvcStok\MvcStok.DAL\bin\Debug\EntityFramework.xml
+C:\Users\Hp\source\repos\MvcStok\MvcStok.DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Hp\source\repos\MvcStok\MvcStok.DAL\obj\Debug\MvcStok.DAL.csproj.CoreCompileInputs.cache
+C:\Users\Hp\source\repos\MvcStok\MvcStok.DAL\obj\Debug\MvcStok.DAL.csproj.CopyComplete
+C:\Users\Hp\source\repos\MvcStok\MvcStok.DAL\obj\Debug\MvcStok.DAL.dll
+C:\Users\Hp\source\repos\MvcStok\MvcStok.DAL\obj\Debug\MvcStok.DAL.pdb

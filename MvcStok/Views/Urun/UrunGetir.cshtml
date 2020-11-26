@@ -1,0 +1,48 @@
+﻿@model MvcStok.DAL.TBLURUNLER
+@{
+    ViewBag.Title = "UrunGetir";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<h2>Güncellenecek Ürün Bilgileri</h2>
+
+<form class="form-group" method="post" action="@Url.Action("Guncelle","Urun")">
+    <div style="margin-top:10px;">
+        <label>Ürun Id</label>
+        <input style="margin-top:5px; margin-bottom:5px;" class="form-control" value="@Model.URUNID" type="text" name="ID" />
+        <label>Ürun Adı</label>
+        <input style="margin-top:5px; margin-bottom:5px;" class="form-control" value="@Model.URUNADI" type="text" name="ProductName" required />
+        <label>Ürün Kategori</label>
+        <select style="margin-top:5px; margin-bottom:5px;" class="form-control" name="ProductCategory" required>
+            @foreach (var item in ViewBag.Categories)
+            {
+                if (item.KATEGORIID == Model.TBLKATEGORILER.KATEGORIID)
+                {
+                    <option selected value="@item.KATEGORIID">@item.KATEGORIAD</option>
+                }
+                else
+                {
+                    <option value="@item.KATEGORIID">@item.KATEGORIAD</option>
+                }
+
+            }
+        </select>
+      
+        <label>Marka</label>
+        <input style="margin-top:5px; margin-bottom:5px;" class="form-control" value="@Model.MARKA" type="text" name="ProductBrand" required />
+
+        <label>Fiyat</label>
+        <input style="margin-top:5px; margin-bottom:5px;" class="form-control" value="@Model.FIYAT" type="text" name="ProductPrice" required />
+        <label>Stok</label>
+        <input style="margin-top:5px; margin-bottom:5px;" class="form-control" value="@Model.STOK" type="text" name="ProductStock" required />
+    </div>
+    <div style="margin-top:5px;">
+        <button type="submit" class="btn btn-warning">
+            Güncelle
+        </button>
+    </div>
+</form>
+
+    @*@Html.DropDownListFor(m=>m.TBLKATEGORILER.KATEGORIID,(List<SelectListItem>)ViewBag.dgr, new { @class = "form-control",nameof="ProductCategory" })*@
+   
+   
